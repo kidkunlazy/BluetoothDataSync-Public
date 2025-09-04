@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_mac_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="监听目标MAC地址" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_app_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="AppID" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_app_key"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="AppKey" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_api_url"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="API服务器地址" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/switch_service"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="启动数据同步服务"
+        android:textSize="18sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="服务实时状态："
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#F5F5F5"
+        android:padding="8dp">
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+            <TextView android:layout_width="80dp" android:layout_height="wrap_content" android:text="服务状态:" android:textStyle="bold"/>
+            <TextView android:id="@+id/tv_service_status" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="已关闭"/>
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:orientation="horizontal">
+            <TextView android:layout_width="80dp" android:layout_height="wrap_content" android:text="上次发送:" android:textStyle="bold"/>
+            <TextView android:id="@+id/tv_last_result" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="无"/>
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:orientation="horizontal">
+            <TextView android:layout_width="80dp" android:layout_height="wrap_content" android:text="下次扫描:" android:textStyle="bold"/>
+            <TextView android:id="@+id/tv_next_scan_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="无"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="最近一次获取到的Raw数据:"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/tv_raw_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="#F5F5F5"
+        android:padding="8dp"
+        android:text="等待服务启动和扫描..."
+        android:textColor="#333333"
+        android:textIsSelectable="true" />
+
+</LinearLayout>
