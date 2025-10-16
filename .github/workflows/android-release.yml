@@ -3,9 +3,9 @@ name: Android CI/CD
 # 您的双触发条件，已完整保留
 on:
   push:
-    # 1. 当代码被推送到 main 分支时触发
+    # 1. 当代码被推送到 Nightly 分支时触发
     branches:
-      - main
+      - Nightly
     # 2. 当一个以 'v' 开头的标签被推送到仓库时也触发
     tags:
       - 'v*.*.*'
@@ -50,10 +50,10 @@ jobs:
         keyPassword: ${{ secrets.MY_KEY_PASSWORD }}
         buildToolsVersion: 36.0.0
 
-    # 步骤 7A: 如果是推送到 main 分支，则作为 Artifacts 上传
-    - name: Upload APK as Artifact (for main branch)
+    # 步骤 7A: 如果是推送到 Nightly 分支，则作为 Artifacts 上传
+    - name: Upload APK as Artifact (for Nightly branch)
       uses: actions/upload-artifact@v4
-      if: startsWith(github.ref, 'refs/heads/main')
+      if: startsWith(github.ref, 'refs/heads/Nightly')
       with:
         name: app-snapshot-signed
         path: ${{ steps.sign_app.outputs.signedFile }}

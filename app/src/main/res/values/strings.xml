@@ -1,3 +1,64 @@
 <resources>
-    <string name="app_name">Bluetooth Data Sync</string>
+    <string name="app_name">蓝牙数据同步</string>
+
+    <!-- MainActivity -->
+    <string name="mac_address_hint">目标设备 MAC 地址</string>
+    <string name="app_id_hint">App ID</string>
+    <string name="app_key_hint">App Key</string>
+    <string name="api_url_hint">API URL</string>
+    <string name="start_service">启动服务</string>
+    <string name="stop_service">停止服务</string>
+    <string name="service_status_label">服务状态:</string>
+    <string name="last_result_label">上次结果:</string>
+    <string name="next_scan_time_label">下次扫描:</string>
+    <string name="last_raw_data_label">最后接收的原始数据:</string>
+    <string name="raw_data_none">无</string>
+    <!-- 关键修复：重新添加这个被引用的字符串 -->
+    <string name="status_not_running">未运行</string>
+
+    <!-- Settings -->
+    <string name="action_settings">设置</string>
+    <string name="title_activity_settings">设置</string>
+    <string name="language_selection_title">语言选择</string>
+    <string name="language_chinese">中文</string>
+    <string name="language_english">English</string>
+    <string name="language_system_default">跟随系统</string>
+    <string name="save_and_restart">保存并重启</string>
+
+    <!-- Notifications -->
+    <string name="notification_title">蓝牙同步服务运行中</string>
+    <string name="notification_big_title">蓝牙数据同步服务</string>
+    <string name="notification_status_label">服务状态:</string>
+    <string name="notification_last_result_label">上次发送:</string>
+    <string name="notification_next_scan_label">下次扫描:</string>
+    <string name="next_scan_none">无</string>
+
+    <!-- Service Statuses & Results -->
+    <string name="status_enabled">已启用</string>
+    <string name="status_scanning">正在扫描设备…</string>
+    <string name="status_sending">正在发送数据…</string>
+    <string name="status_waiting">等待下次扫描</string>
+    <string name="status_stopped">已关闭</string>
+    <string name="result_none">无</string>
+    <string name="result_success">成功 (HTTP %1$s)</string>
+    <string name="result_server_error">失败: 服务器错误 (HTTP %1$s)</string>
+    <string name="result_scan_timeout">失败: 扫描超时</string>
+    <string name="result_bluetooth_off">失败: 蓝牙已关闭</string>
+    <string name="result_scan_error">失败: 蓝牙扫描错误 (%1$s)</string>
+    <string name="result_network_error">失败: 网络请求错误</string>
+
+    <!-- FAQ -->
+    <string name="faq_entry">常见问题</string>
+    <string name="faq_title">常见问题 (FAQ)</string>
+    <string name="faq_title_short">FAQ</string>
+    <string name="faq_content">
+        <b>问：为什么应用无法找到我的蓝牙设备？</b>\n
+        答：请确保您的蓝牙设备已开启、电量充足，并且处于可被发现的模式。同时，请检查应用是否已被授予必要的蓝牙和位置权限,位置权限要求为“一直允许”。\n\n
+
+        <b>问：数据同步失败怎么办？</b>\n
+        答：请检查您的网络连接是否稳定。您可以尝试重启应用或断开并重新连接蓝牙设备。如果问题仍然存在，请检查设置页面中的服务器地址是否配置正确。\n\n
+
+        <b>问：应用在后台停止工作了怎么办？</b>\n
+        答：为了保证应用在后台持续运行，您可能需要在手机的电池优化设置中，将本应用设置为“不受限制”或“允许后台运行”。不同品牌的手机设置路径可能不同。已知使用微信语音电话能再次唤醒后台，有很大概率能恢复一段时间的通报服务。由于系统后台限制，无法解决。\n\n
+    </string>
 </resources>
