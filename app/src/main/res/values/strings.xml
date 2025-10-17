@@ -60,5 +60,14 @@
 
         <b>问：应用在后台停止工作了怎么办？</b>\n
         答：为了保证应用在后台持续运行，您可能需要在手机的电池优化设置中，将本应用设置为“不受限制”或“允许后台运行”。不同品牌的手机设置路径可能不同。已知使用微信语音电话能再次唤醒后台，有很大概率能恢复一段时间的通报服务。由于系统后台限制，无法解决。\n\n
-    </string>
+    </string>、
+
+    <!-- Location Permission on launch -->
+    <string name="background_location_permission_title">需要后台位置权限</string>
+    <string name="background_location_permission_message">为了让应用能在后台（关闭后）也能持续扫描和同步蓝牙设备，需要您将位置权限设置为“一直允许”。</string>
+    <string name="go_to_settings">前往设置</string>
+    <string name="cancel">取消</string>
+
+    <!-- Check Version Update -->
+    <string name="check_for_updates">检查更新</string>
 </resources>

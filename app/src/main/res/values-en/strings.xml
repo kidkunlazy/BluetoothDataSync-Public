@@ -61,4 +61,13 @@
     <b>Q: What should I do if the app stops working in the background?</b>\n
     A: To ensure the app continues to run in the background, you may need to set this app to \"Unrestricted\" or \"Allow background activity\" in your phone\'s battery optimization settings. The settings path may vary for different phone brands. It is known that making a WeChat voice call can reawaken the background service, which has a high probability of restoring the reporting service for a period of time. This issue cannot be completely resolved due to system background limitations.\n\n
     </string>
+
+    <!-- Location Permission on launch -->
+    <string name="background_location_permission_title">Background Location Permission Required</string>
+    <string name="background_location_permission_message">To allow the app to continuously scan and sync Bluetooth devices even when it\'s in the background (or closed), you need to set the location permission to "Allow all the time".</string>
+    <string name="go_to_settings">Go to Settings</string>
+    <string name="cancel">Cancel</string>
+
+    <!-- Check Version Update -->
+    <string name="check_for_updates">Check for updates</string>
 </resources>

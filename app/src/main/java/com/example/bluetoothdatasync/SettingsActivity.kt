@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.bluetoothdatasync.language.LanguageManager
 import android.content.Intent
 import android.widget.TextView
+import android.net.Uri
 
 class SettingsActivity : AppCompatActivity() {
 
@@ -25,6 +26,15 @@ class SettingsActivity : AppCompatActivity() {
         val faqTextView: TextView = findViewById(R.id.faqTextView)
         faqTextView.setOnClickListener {
             val intent = Intent(this, FaqActivity::class.java)
+            startActivity(intent)
+        }
+
+        val updateTextView: TextView = findViewById(R.id.updateTextView)
+        updateTextView.setOnClickListener {
+            // 定义你的项目地址
+            val projectUrl = "https://github.com/kidkunlazy/BluetoothDataSync-Public"
+            val intent = Intent(Intent.ACTION_VIEW)
+            intent.data = Uri.parse(projectUrl)
             startActivity(intent)
         }
 
